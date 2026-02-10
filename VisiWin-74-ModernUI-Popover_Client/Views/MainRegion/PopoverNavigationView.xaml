@@ -1,0 +1,87 @@
+﻿<vw:View x:Class="HMI.PopoverNavigationView"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:local="clr-namespace:HMI"
+         mc:Ignorable="d" MinWidth="1024" MinHeight="588">
+
+    <Grid x:Name="LayoutRoot" Background="{DynamicResource Blue4Brush}" IsSharedSizeScope="True">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" SharedSizeGroup="A" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" SharedSizeGroup="B" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Grid.ColumnSpan="3" Background="{DynamicResource Blue4Brush}">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" SharedSizeGroup="A" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" SharedSizeGroup="B" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.PopoverNavigation.DisplayedOverRegions}" HorizontalAlignment="Center" FontSize="16"
+                       FontWeight="Bold" Margin="0,10,0,10" Foreground="{DynamicResource ForegroundDarkBrush}"/>
+
+            <TextBlock Grid.Column="2" Text="{vw:LocalizedTextBinding LocalizableText=@Views.PopoverNavigation.DisplayedInsideOneRegion}" HorizontalAlignment="Center"
+                       FontSize="16"
+                       FontWeight="Bold"  Margin="0,10,0,10" Foreground="{DynamicResource ForegroundDarkBrush}"/>
+
+        </Grid>
+
+        <vw:NavigationContainer Grid.Column="0" Grid.Row="1" NavigationPanelDock="Left"
+                                Background="{DynamicResource Blue4Brush}"
+                                BottomViewName="ClosePopoversBottomView" HideRegions="True">
+
+            <vw:NavigationContainer.Items>
+
+                <vw:NavigationContainerItem LocalizableText="@Views.PopoverNavigation.NavVarOut" Height="80" Width="250" Margin="5,5,5,0"
+                                            ViewName="VarOutSampleView"
+                                            RegionName="PopoverDemoRegion"
+                                            IsChecked="True" />
+
+                <vw:NavigationContainerItem LocalizableText="@Views.PopoverNavigation.NavBar" Height="80" Width="250" Margin="5,5,5,0"
+                                            ViewName="BarSampleView"
+                                            RegionName="PopoverDemoRegion"/>
+
+                <vw:NavigationContainerItem LocalizableText="@Views.PopoverNavigation.NavPieChart" Height="80" Width="250" Margin="5,5,5,0"
+                                            ViewName="PieChartSampleView"
+                                            RegionName="PopoverDemoRegion"/>
+
+            </vw:NavigationContainer.Items>
+
+        </vw:NavigationContainer>
+
+        <vw:Region x:Name="PopoverDemoRegion" Grid.Column="1" Grid.Row="1" Margin="0,5,0,10" Background="{DynamicResource ApplicationBackgroundBrush}"/>
+
+        <vw:NavigationContainer Grid.Row="1" Grid.Column="2" NavigationPanelDock="Right" HideRegions="True"
+                                Background="{DynamicResource Blue4Brush}">
+
+            <vw:NavigationContainer.Items>
+
+                <vw:NavigationContainerItem LocalizableText="@Views.PopoverNavigation.NavAdditionalHelp" Height="80" Width="250" Margin="5,5,5,0"
+                                            ViewName="AdditionalHelpSampleView"
+                                            RegionName="PopoverDemoRegion"/>
+
+                <vw:NavigationContainerItem LocalizableText="@Views.Popover.Config.PopoverTitle" Height="80" Width="250" Margin="5,5,5,0"
+                                            ViewName="CustomSampleView"
+                                            RegionName="PopoverDemoRegion"/>
+
+            </vw:NavigationContainer.Items>
+
+        </vw:NavigationContainer>
+
+        <vw:Region x:Name="ClosePopoversBottomRegion" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Background="{DynamicResource Blue4Brush}" StartView="ClosePopoversBottomView"/>
+
+    </Grid>
+
+</vw:View>

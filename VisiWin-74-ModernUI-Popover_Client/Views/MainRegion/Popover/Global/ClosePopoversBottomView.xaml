@@ -1,0 +1,51 @@
+<vw:View x:Class="HMI.Views.MainRegion.Popover.ClosePopoversBottomView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{DynamicResource Blue4Brush}">
+
+    <Grid Margin="8,6,8,8">
+
+        <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}" Margin="0,0,0,8">
+
+            <Grid VerticalAlignment="Center">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel>
+                    <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.ClosePopovers.Title}" Style="{DynamicResource PopoverHeaderTitle}" />
+                    <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.ClosePopovers.Subtitle}"
+                               Style="{DynamicResource PopoverHeaderSubtitle}" />
+                </StackPanel>
+
+                <vw:Button Grid.Column="1" LocalizableText="@Views.Popover.ClosePopovers.CloseAll"
+                           SymbolResourceKey="BlackCloseIcon"
+                           Foreground="{DynamicResource ForegroundDarkBrush}"
+                           Background="{DynamicResource Blue4Brush}"
+                           Width="235" HorizontalContentAlignment="Stretch"
+                           Height="48" SymbolPlacement="Left" SymbolHorizontalAlignment="Left" SymbolMargin="0,0,0,0"
+                           HorizontalAlignment="Right"
+                           VerticalAlignment="Bottom">
+
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PreviewMouseDown">
+                            <vw:CloseAllPopoversAction />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+
+                </vw:Button>
+
+            </Grid>
+
+        </Border>
+
+    </Grid>
+    
+</vw:View>

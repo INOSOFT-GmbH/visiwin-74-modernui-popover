@@ -1,0 +1,68 @@
+<vw:View x:Class="HMI.Views.MainRegion.Popover.PieChartPopoverView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="http://inosoft.com/visiwin7"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance Type=vw:PieChart, IsDesignTimeCreatable=False}"
+    Width="355" Height="300"
+    Background="{DynamicResource ApplicationBackgroundBrush}">
+
+    <Grid Style="{DynamicResource PopoverRootGrid}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}">
+            <StackPanel>
+                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.PopoverTitle}" Style="{DynamicResource PopoverHeaderTitle}"/>
+                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.PopoverSubtitle}"
+                           Style="{DynamicResource PopoverHeaderSubtitle}"/>
+            </StackPanel>
+        </Border>
+
+        <GroupBox Grid.Row="1" Header="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.SegmentValuesHeader}" Style="{DynamicResource PopoverSectionGroupBox}">
+            <StackPanel Width="280" HorizontalAlignment="Center">
+                <Grid Margin="0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.Segment1}" VerticalAlignment="Center"
+                               Style="{DynamicResource PopoverSectionHeader}"/>
+                    <vw:NumericVarIn Grid.Column="1"
+                                     RawValue="{Binding Items[0].RawValue, Mode=TwoWay}"
+                                     Height="40"/>
+                </Grid>
+
+                <Grid Margin="0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.Segment2}" VerticalAlignment="Center"
+                               Style="{DynamicResource PopoverSectionHeader}"/>
+                    <vw:NumericVarIn Grid.Column="1"
+                                     RawValue="{Binding Items[1].RawValue, Mode=TwoWay}"
+                                     Height="40"/>
+                </Grid>
+
+                <Grid Margin="0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="110"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.Segment3}" VerticalAlignment="Center"
+                               Style="{DynamicResource PopoverSectionHeader}"/>
+                    <vw:NumericVarIn Grid.Column="1"
+                                     RawValue="{Binding Items[2].RawValue, Mode=TwoWay}"
+                                     Height="40"/>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+    
+</vw:View>

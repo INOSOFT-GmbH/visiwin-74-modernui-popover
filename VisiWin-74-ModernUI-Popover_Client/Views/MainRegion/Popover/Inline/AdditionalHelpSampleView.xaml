@@ -1,0 +1,42 @@
+<vw:View x:Class="HMI.Views.MainRegion.Popover.AdditionalHelpSampleView"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         mc:Ignorable="d" MinWidth="600" MinHeight="500" Background="{DynamicResource ApplicationBackgroundBrush}">
+
+    <Grid Style="{DynamicResource PopoverRootGrid}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}">
+            <StackPanel>
+                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.SampleTitle}" Style="{DynamicResource PopoverHeaderTitle}"/>
+                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.SampleSubtitle}"
+                           Style="{DynamicResource PopoverHeaderSubtitle}"/>
+            </StackPanel>
+        </Border>
+
+        <vw:SymbolPresenter Grid.Row="1" SymbolResourceKey="SamplePNG" Margin="10" VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="PreviewMouseDown">
+                    <vw:PopoverAction PopoverViewName="AdditionalHelpPopoverView"
+                                      PopoverPanelName="AdditionalHelpPanel"
+                                      Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.PopoverTitle}"
+                                      Placement="Center"
+                                      Alignment="OnElement" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </vw:SymbolPresenter>
+
+        <vw:PopoverPanel x:Name="AdditionalHelpPanel" Grid.Row="0" Grid.RowSpan="2" />
+
+    </Grid>
+
+</vw:View>
