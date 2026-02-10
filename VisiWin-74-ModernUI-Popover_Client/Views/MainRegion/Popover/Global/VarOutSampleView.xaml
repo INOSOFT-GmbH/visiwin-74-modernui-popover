@@ -16,8 +16,8 @@
 
         <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}" Margin="0,0,0,8">
             <StackPanel>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.SampleTitle}" Style="{DynamicResource PopoverHeaderTitle}"/>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.SampleSubtitle}"
+                <vw:TextBlock LocalizableText="@Views.Popover.VarOut.SampleTitle" Style="{DynamicResource PopoverHeaderTitle}"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.VarOut.SampleSubtitle"
                            Style="{DynamicResource PopoverHeaderSubtitle}"/>
             </StackPanel>
         </Border>
@@ -25,14 +25,14 @@
         <UniformGrid Grid.Row="1" Rows="2" Columns="2" >
             
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Common.PlacementLeft}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Common.PlacementLeft" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                 <vw:NumericVarOut x:Name="VarOut1" 
                                   VariableName="__DEMO.NumericVar1" 
                                   Width="150" Height="50" UseVariableText="True">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseDown">
                             <vw:PopoverAction PopoverViewName="VarOutPopoverView"
-                                              Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.Variable1Title}"
+                                              LocalizableTitle="@Views.Popover.VarOut.Variable1Title"
                                               Placement="Left"
                                               Alignment="OnElement"/>
                         </i:EventTrigger>
@@ -41,14 +41,14 @@
             </StackPanel>
 
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Common.PlacementRight}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Common.PlacementRight" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                 <vw:NumericVarOut x:Name="VarOut2" 
                                   VariableName="__DEMO.NumericVar2" 
                                   Width="150" Height="50" UseVariableText="True">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseDown">
                             <vw:PopoverAction PopoverViewName="VarOutPopoverView"
-                                              Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.Variable2Title}"
+                                              LocalizableTitle="@Views.Popover.VarOut.Variable2Title"
                                               Placement="Right"
                                               Alignment="OnElement"/>
                         </i:EventTrigger>
@@ -57,14 +57,14 @@
             </StackPanel>
 
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Common.PlacementLeft}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Common.PlacementLeft" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                 <vw:NumericVarOut x:Name="VarOut3" 
                                   VariableName="__DEMO.NumericVar3" 
                                   Width="150" Height="50" UseVariableText="True">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseDown">
                             <vw:PopoverAction PopoverViewName="VarOutPopoverView"
-                                              Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.Variable3Title}"
+                                              LocalizableTitle="@Views.Popover.VarOut.Variable3Title"
                                               Placement="Left"
                                               Alignment="OnElement"/>
                         </i:EventTrigger>
@@ -73,14 +73,14 @@
             </StackPanel>
 
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Common.PlacementRight}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Common.PlacementRight" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                 <vw:NumericVarOut x:Name="VarOut4" 
                                   VariableName="__DEMO.NumericVar4" 
                                   Width="150" Height="50" UseVariableText="True">
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseDown">
                             <vw:PopoverAction PopoverViewName="VarOutPopoverView"
-                                              Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.Variable4Title}"
+                                              LocalizableTitle="@Views.Popover.VarOut.Variable4Title"
                                               Placement="Right"
                                               Alignment="OnElement"/>
                         </i:EventTrigger>

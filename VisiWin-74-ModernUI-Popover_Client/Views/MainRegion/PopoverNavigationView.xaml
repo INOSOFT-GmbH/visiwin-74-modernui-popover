@@ -1,4 +1,4 @@
-﻿<vw:View x:Class="HMI.PopoverNavigationView"
+<vw:View x:Class="HMI.PopoverNavigationView"
          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
          xmlns:vw="http://inosoft.com/visiwin7"
@@ -29,10 +29,10 @@
                 <ColumnDefinition Width="Auto" SharedSizeGroup="B" />
             </Grid.ColumnDefinitions>
 
-            <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.PopoverNavigation.DisplayedOverRegions}" HorizontalAlignment="Center" FontSize="16"
+            <vw:TextBlock LocalizableText="@Views.PopoverNavigation.DisplayedOverRegions" HorizontalAlignment="Center" FontSize="16"
                        FontWeight="Bold" Margin="0,10,0,10" Foreground="{DynamicResource ForegroundDarkBrush}"/>
 
-            <TextBlock Grid.Column="2" Text="{vw:LocalizedTextBinding LocalizableText=@Views.PopoverNavigation.DisplayedInsideOneRegion}" HorizontalAlignment="Center"
+            <vw:TextBlock Grid.Column="2" LocalizableText="@Views.PopoverNavigation.DisplayedInsideOneRegion" HorizontalAlignment="Center"
                        FontSize="16"
                        FontWeight="Bold"  Margin="0,10,0,10" Foreground="{DynamicResource ForegroundDarkBrush}"/>
 

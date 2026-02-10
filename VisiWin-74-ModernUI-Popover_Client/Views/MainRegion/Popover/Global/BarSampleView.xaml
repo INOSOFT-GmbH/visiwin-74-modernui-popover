@@ -17,8 +17,8 @@
 
         <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}" Margin="0,0,0,8">
             <StackPanel>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.SampleTitle}" Style="{DynamicResource PopoverHeaderTitle}"/>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.SampleSubtitle}"
+                <vw:TextBlock LocalizableText="@Views.Popover.Bar.SampleTitle" Style="{DynamicResource PopoverHeaderTitle}"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Bar.SampleSubtitle"
                            Style="{DynamicResource PopoverHeaderSubtitle}"/>
             </StackPanel>
         </Border>
@@ -26,7 +26,7 @@
         <UniformGrid Grid.Row="1" Rows="2" Columns="2">
             
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Common.PlacementLeft}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Common.PlacementLeft" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                 <vw:Bar x:Name="Bar1" 
                         VariableName="__DEMO.BarValue1" 
                         Width="80" Height="200"  UseVariableText="True"
@@ -40,7 +40,7 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseDown">
                             <vw:PopoverAction PopoverViewName="BarPopoverView"
-                                              Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Bar1Title}"
+                                              LocalizableTitle="@Views.Popover.Bar.Bar1Title"
                                               Placement="Left"
                                               Alignment="OnElement"/>
                         </i:EventTrigger>
@@ -49,7 +49,7 @@
             </StackPanel>
 
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Common.PlacementRight}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Common.PlacementRight" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                 <vw:Bar x:Name="Bar2" UseVariableText="True"
                         VariableName="__DEMO.BarValue2" 
                         Width="80" Height="200"
@@ -63,7 +63,7 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseDown">
                             <vw:PopoverAction PopoverViewName="BarPopoverView"
-                                              Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Bar2Title}"
+                                              LocalizableTitle="@Views.Popover.Bar.Bar2Title"
                                               Placement="Right"
                                               Alignment="OnElement"/>
                         </i:EventTrigger>
@@ -72,7 +72,7 @@
             </StackPanel>
 
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Common.PlacementLeft}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Common.PlacementLeft" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                 <vw:Bar x:Name="Bar3" UseVariableText="True"
                         VariableName="__DEMO.BarValue3" 
                         Width="80" Height="200"
@@ -86,7 +86,7 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseDown">
                             <vw:PopoverAction PopoverViewName="BarPopoverView"
-                                              Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Bar3Title}"
+                                              LocalizableTitle="@Views.Popover.Bar.Bar3Title"
                                               Placement="Left"
                                               Alignment="OnElement"/>
                         </i:EventTrigger>
@@ -95,7 +95,7 @@
             </StackPanel>
 
             <StackPanel Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Common.PlacementRight}" HorizontalAlignment="Center" Margin="0,0,0,8"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Common.PlacementRight" HorizontalAlignment="Center" Margin="0,0,0,8"/>
                 <vw:Bar x:Name="Bar4" UseVariableText="True"
                         VariableName="__DEMO.BarValue4" 
                         Width="80" Height="200"
@@ -109,7 +109,7 @@
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="PreviewMouseDown">
                             <vw:PopoverAction PopoverViewName="BarPopoverView"
-                                              Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Bar4Title}"
+                                              LocalizableTitle="@Views.Popover.Bar.Bar4Title"
                                               Placement="Right"
                                               Alignment="OnElement"/>
                         </i:EventTrigger>

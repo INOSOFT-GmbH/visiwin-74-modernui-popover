@@ -1,43 +1,45 @@
 <vw:View x:Class="HMI.Views.MainRegion.Popover.AdditionalHelpPopoverView"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:vw="http://inosoft.com/visiwin7"
-    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Width="975" Height="670" Background="{DynamicResource ApplicationBackgroundBrush}">
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         mc:Ignorable="d"
+         Width="975" Height="650" Background="{DynamicResource ApplicationBackgroundBrush}">
 
     <Grid Margin="16">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" Background="#FFE53935" CornerRadius="4" Padding="12,8" Margin="0,0,0,12">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                <TextBlock Text="&#xE7BA;" FontFamily="Segoe MDL2 Assets" FontSize="22" 
-                           Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                <TextBlock Text="&#xE7BA;" FontFamily="Segoe MDL2 Assets" FontSize="22"
+                           Foreground="White" VerticalAlignment="Center" Margin="0,0,10,0" />
                 <StackPanel>
-                    <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.ErrorCode}" FontSize="16" FontWeight="Bold" Foreground="White"/>
-                    <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.ErrorTitle}" FontSize="13" Foreground="#FFFCE4EC"/>
+                    <vw:TextBlock LocalizableText="@Views.Popover.AdditionalHelp.ErrorCode" FontSize="16"
+                                  FontWeight="Bold" Foreground="White" />
+                    <vw:TextBlock LocalizableText="@Views.Popover.AdditionalHelp.ErrorTitle" FontSize="13"
+                                  Foreground="#FFFCE4EC" />
                 </StackPanel>
             </StackPanel>
         </Border>
 
-        <TextBlock Grid.Row="1" TextWrapping="Wrap" FontSize="13" Margin="8,0,0,12"
-                   Foreground="{DynamicResource ApplicationForegroundBrush}"
-                   Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.Description}"/>
-
-        <GroupBox Grid.Row="2" Header="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.DiagnosisHeader}" Margin="0,0,0,12" Padding="8"
+        <GroupBox Grid.Row="2"
+                  Margin="0,0,0,12" Padding="8"
                   BorderBrush="{DynamicResource ApplicationForegroundBrush}">
 
+            <GroupBox.Header>
+                <vw:TextBlock LocalizableText="@Views.Popover.AdditionalHelp.DiagnosisHeader"/>
+            </GroupBox.Header>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Height="200">
 
                 <vw:Gauge Width="350" Height="350"
@@ -46,23 +48,23 @@
                           UnitText="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.UnitBar}"
                           UnitTextVisibility="Visible"
                           ValueTextVisibility="Visible"
-                          LabelText="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.SystemPressure}"
+                          LocalizableLabelText="@Views.Popover.AdditionalHelp.SystemPressure"
                           LabelTextVisibility="Visible"
                           LabelTextMargin="0,0,0,150"
                           Background="#20808080"
-                          RulerBaseLineFill="#60808080"/>
+                          RulerBaseLineFill="#60808080" />
 
                 <StackPanel VerticalAlignment="Center" Margin="16,0,0,0" Width="200">
 
-                    <TextBlock TextWrapping="Wrap" FontSize="12" Margin="0,0,0,6"
-                               Foreground="{DynamicResource ApplicationForegroundBrush}"
-                               Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.BulletTargetPressure}"/>
-                    <TextBlock TextWrapping="Wrap" FontSize="12" Margin="0,0,0,6"
-                               Foreground="{DynamicResource ApplicationForegroundBrush}"
-                               Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.BulletLowPressure}"/>
-                    <TextBlock TextWrapping="Wrap" FontSize="12"
-                               Foreground="{DynamicResource ApplicationForegroundBrush}"
-                               Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.BulletCheckCompressor}"/>
+                    <vw:TextBlock TextWrapping="Wrap" FontSize="12" Margin="0,0,0,6"
+                                  Foreground="{DynamicResource ApplicationForegroundBrush}"
+                                  LocalizableText="@Views.Popover.AdditionalHelp.BulletTargetPressure" />
+                    <vw:TextBlock TextWrapping="Wrap" FontSize="12" Margin="0,0,0,6"
+                                  Foreground="{DynamicResource ApplicationForegroundBrush}"
+                                  LocalizableText="@Views.Popover.AdditionalHelp.BulletLowPressure" />
+                    <vw:TextBlock TextWrapping="Wrap" FontSize="12"
+                                  Foreground="{DynamicResource ApplicationForegroundBrush}"
+                                  LocalizableText="@Views.Popover.AdditionalHelp.BulletCheckCompressor" />
 
                 </StackPanel>
 
@@ -70,37 +72,45 @@
 
         </GroupBox>
 
-        <GroupBox Grid.Row="3" Header="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.ChecklistHeader}" Margin="0,0,0,12" Padding="8"
+        <GroupBox Grid.Row="3"
+                  Margin="0,0,0,12" Padding="8"
                   BorderBrush="{DynamicResource ApplicationForegroundBrush}">
+            <GroupBox.Header>
+                <vw:TextBlock LocalizableText="@Views.Popover.AdditionalHelp.ChecklistHeader"/>
+            </GroupBox.Header>
             <UniformGrid Columns="2">
-            <vw:CheckBox LabelText="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.Check1}"
-                             Margin="0,4"/>
-            <vw:CheckBox LabelText="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.Check2}"
-                             Margin="0,4"/>
-            <vw:CheckBox LabelText="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.Check3}"
-                             Margin="0,4"/>
-            <vw:CheckBox LabelText="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.Check4}"
-                             Margin="0,4"/>
+                <vw:CheckBox LocalizableLabelText="@Views.Popover.AdditionalHelp.Check1"
+                             Margin="0,4" />
+                <vw:CheckBox LocalizableLabelText="@Views.Popover.AdditionalHelp.Check2"
+                             Margin="0,4" />
+                <vw:CheckBox LocalizableLabelText="@Views.Popover.AdditionalHelp.Check3"
+                             Margin="0,4" />
+                <vw:CheckBox LocalizableLabelText="@Views.Popover.AdditionalHelp.Check4"
+                             Margin="0,4" />
             </UniformGrid>
         </GroupBox>
 
-        <GroupBox Grid.Row="4" Header="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.MaintenanceHeader}" Margin="0,0,0,12" Padding="8"
+        <GroupBox Grid.Row="4"
+                  Margin="0,0,0,12" Padding="8"
                   BorderBrush="{DynamicResource ApplicationForegroundBrush}">
+            <GroupBox.Header>
+                <vw:TextBlock LocalizableText="@Views.Popover.AdditionalHelp.MaintenanceHeader"/>
+            </GroupBox.Header>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" TextWrapping="Wrap" FontSize="12" VerticalAlignment="Center"
-                           Foreground="{DynamicResource ApplicationForegroundBrush}"
-                           Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.MaintenanceText}"/>
-                <vw:Switch Grid.Column="1" VariableName="__DEMO.BarValue2" 
+                <vw:TextBlock Grid.Column="0" TextWrapping="Wrap" FontSize="12" VerticalAlignment="Center"
+                              Foreground="{DynamicResource ApplicationForegroundBrush}"
+                              LocalizableText="@Views.Popover.AdditionalHelp.MaintenanceText" />
+                <vw:Switch Grid.Column="1" VariableName="__DEMO.BarValue2"
                            Width="60" Height="30"
-                           VerticalAlignment="Center" Margin="12,0,0,0"/>
+                           VerticalAlignment="Center" Margin="12,0,0,0" />
             </Grid>
         </GroupBox>
 
-        <Border Grid.Row="5"/>
+        <Border Grid.Row="5" />
 
         <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,4,0,0">
 
@@ -110,7 +120,7 @@
                        Margin="0,0,8,0">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="PreviewMouseDown">
-                        <vw:SetVariableAction VariableName="__DEMO.BarValue1" Value="15"/>
+                        <vw:SetVariableAction VariableName="__DEMO.BarValue1" Value="15" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </vw:Button>
@@ -121,7 +131,7 @@
                        HorizontalAlignment="Right">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="PreviewMouseDown">
-                        <vw:CloseAllPopoversAction PopoverPanelName="AdditionalHelpPanel"/>
+                        <vw:CloseAllPopoversAction PopoverPanelName="AdditionalHelpPanel" />
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </vw:Button>
@@ -129,5 +139,5 @@
         </StackPanel>
 
     </Grid>
-    
+
 </vw:View>

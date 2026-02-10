@@ -16,8 +16,8 @@
 
         <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}" Margin="0,0,0,8">
             <StackPanel>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.SampleTitle}" Style="{DynamicResource PopoverHeaderTitle}"/>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.SampleSubtitle}"
+                <vw:TextBlock LocalizableText="@Views.Popover.PieChart.SampleTitle" Style="{DynamicResource PopoverHeaderTitle}"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.PieChart.SampleSubtitle"
                            Style="{DynamicResource PopoverHeaderSubtitle}"/>
             </StackPanel>
         </Border>
@@ -31,24 +31,24 @@
                          Height="350"
                          InnerCircleSize="80"
                          ValueUnitVisibility="Both"
-                         LabelText="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.DemoLabel}">
+                         LocalizableLabelText="@Views.Popover.PieChart.DemoLabel">
                 
                 <vw:PieSegment RawValue="30" 
                                Fill="{DynamicResource PrimaryBrush}" 
-                               Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.Segment1}"/>
+                               LocalizableText="@Views.Popover.PieChart.Segment1"/>
 
                 <vw:PieSegment RawValue="45" 
                                Fill="{DynamicResource PrimaryLightBrush}" 
-                               Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.Segment2}"/>
+                               LocalizableText="@Views.Popover.PieChart.Segment2"/>
 
                 <vw:PieSegment RawValue="25" 
                                Fill="{DynamicResource PrimaryDarkBrush}" 
-                               Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.Segment3}"/>
+                               LocalizableText="@Views.Popover.PieChart.Segment3"/>
                 
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="PreviewMouseDown">
                         <vw:PopoverAction PopoverViewName="PieChartPopoverView"
-                                          Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.PieChart.EditSegmentValues}"
+                                          LocalizableTitle="@Views.Popover.PieChart.EditSegmentValues"
                                           Placement="Right"
                                           Alignment="OnElement"
                                           DataContext="{Binding ElementName=MainPieChart}"/>

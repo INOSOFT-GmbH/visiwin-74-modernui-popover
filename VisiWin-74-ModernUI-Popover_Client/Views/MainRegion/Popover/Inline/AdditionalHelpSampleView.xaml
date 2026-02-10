@@ -16,8 +16,8 @@
 
         <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}">
             <StackPanel>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.SampleTitle}" Style="{DynamicResource PopoverHeaderTitle}"/>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.SampleSubtitle}"
+                <vw:TextBlock LocalizableText="@Views.Popover.AdditionalHelp.SampleTitle" Style="{DynamicResource PopoverHeaderTitle}"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.AdditionalHelp.SampleSubtitle"
                            Style="{DynamicResource PopoverHeaderSubtitle}"/>
             </StackPanel>
         </Border>
@@ -28,7 +28,7 @@
                 <i:EventTrigger EventName="PreviewMouseDown">
                     <vw:PopoverAction PopoverViewName="AdditionalHelpPopoverView"
                                       PopoverPanelName="AdditionalHelpPanel"
-                                      Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.AdditionalHelp.PopoverTitle}"
+                                      LocalizableTitle="@Views.Popover.AdditionalHelp.PopoverTitle"
                                       Placement="Center"
                                       Alignment="OnElement" />
                 </i:EventTrigger>

@@ -5,6 +5,8 @@ This is the **example/development project** demonstrating how to implement a "Po
 
 The project serves as a reference for structuring complex UI layouts where content needs to be presented in a decoupled, overlay-like, or distinct "popover" manner relative to the main navigation interactions.
 
+![Popover Preview](Popover.png)
+
 ## Related packages
 
 - VisiWin 7 Runtime 7.4

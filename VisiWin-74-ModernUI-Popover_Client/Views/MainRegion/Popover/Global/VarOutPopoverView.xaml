@@ -17,14 +17,17 @@
 
         <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}">
             <StackPanel>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.PopoverTitle}" Style="{DynamicResource PopoverHeaderTitle}"/>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.PopoverSubtitle}"
+                <vw:TextBlock LocalizableText="@Views.Popover.VarOut.PopoverTitle" Style="{DynamicResource PopoverHeaderTitle}"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.VarOut.PopoverSubtitle"
                            Style="{DynamicResource PopoverHeaderSubtitle}"/>
             </StackPanel>
         </Border>
 
         <StackPanel Grid.Row="1">
-            <GroupBox Header="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.MasterDataHeader}" Style="{DynamicResource PopoverSectionGroupBox}">
+            <GroupBox Style="{DynamicResource PopoverSectionGroupBox}">
+                <GroupBox.Header>
+                    <vw:TextBlock LocalizableText="@Views.Popover.VarOut.MasterDataHeader"/>
+                </GroupBox.Header>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -35,15 +38,18 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.VariableLabel}" Style="{DynamicResource PopoverMetaLabel}"/>
+                    <vw:TextBlock Grid.Row="0" Grid.Column="0" LocalizableText="@Views.Popover.VarOut.VariableLabel" Style="{DynamicResource PopoverMetaLabel}"/>
                     <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding VariableName}" Style="{DynamicResource PopoverMetaValue}"/>
 
-                    <TextBlock Grid.Row="1" Grid.Column="0" Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.DescriptionLabel}" Style="{DynamicResource PopoverMetaLabel}" Margin="0,6,0,0"/>
+                    <vw:TextBlock Grid.Row="1" Grid.Column="0" LocalizableText="@Views.Popover.VarOut.DescriptionLabel" Style="{DynamicResource PopoverMetaLabel}" Margin="0,6,0,0"/>
                     <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding VariableText}" Style="{DynamicResource PopoverMetaValue}" Margin="0,6,0,0"/>
                 </Grid>
             </GroupBox>
 
-            <GroupBox Header="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.LimitsHeader}" Style="{DynamicResource PopoverSectionGroupBox}">
+            <GroupBox Style="{DynamicResource PopoverSectionGroupBox}">
+                <GroupBox.Header>
+                    <vw:TextBlock LocalizableText="@Views.Popover.VarOut.LimitsHeader"/>
+                </GroupBox.Header>
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
@@ -54,10 +60,10 @@
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.MinimumLabel}" Style="{DynamicResource PopoverMetaLabel}"/>
+                    <vw:TextBlock Grid.Row="0" Grid.Column="0" LocalizableText="@Views.Popover.VarOut.MinimumLabel" Style="{DynamicResource PopoverMetaLabel}"/>
                     <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Variable.MinValue}" Style="{DynamicResource PopoverMetaValue}"/>
 
-                    <TextBlock Grid.Row="1" Grid.Column="0" Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.VarOut.MaximumLabel}" Style="{DynamicResource PopoverMetaLabel}" Margin="0,6,0,0"/>
+                    <vw:TextBlock Grid.Row="1" Grid.Column="0" LocalizableText="@Views.Popover.VarOut.MaximumLabel" Style="{DynamicResource PopoverMetaLabel}" Margin="0,6,0,0"/>
                     <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Variable.MaxValue}" Style="{DynamicResource PopoverMetaValue}" Margin="0,6,0,0"/>
                 </Grid>
             </GroupBox>

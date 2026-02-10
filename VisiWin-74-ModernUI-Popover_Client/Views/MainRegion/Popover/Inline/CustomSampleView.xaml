@@ -1,4 +1,4 @@
-﻿<vw:View x:Class="HMI.Views.MainRegion.Popover.CustomSampleView"
+<vw:View x:Class="HMI.Views.MainRegion.Popover.CustomSampleView"
          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
          xmlns:vw="http://inosoft.com/visiwin7"
@@ -16,9 +16,9 @@
 
         <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}">
             <StackPanel>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.SampleTitle}"
+                <vw:TextBlock LocalizableText="@Views.Popover.Config.SampleTitle"
                            Style="{DynamicResource PopoverHeaderTitle}" />
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.SampleSubtitle}"
+                <vw:TextBlock LocalizableText="@Views.Popover.Config.SampleSubtitle"
                            Style="{DynamicResource PopoverHeaderSubtitle}" />
             </StackPanel>
         </Border>
@@ -33,13 +33,13 @@
                 <i:EventTrigger EventName="PreviewMouseDown">
 
                     <vw:PopoverAction PopoverPanelName="CustomElementPanel"
-                                      Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.PopoverTitle}"
+                                      LocalizableTitle="@Views.Popover.Config.PopoverTitle"
                                       Placement="Center"
                                       Alignment="OnElement">
 
                         <vw:PopoverAction.PopoverElement>
 
-                            <vw:Popover Title="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.PopoverTitle}" Width="700" Height="460">
+                            <vw:Popover LocalizableTitle="Views.Popover.Config.PopoverTitle" Width="700" Height="480">
 
                                 <Grid MinWidth="420" Background="{DynamicResource ApplicationBackgroundBrush}">
 
@@ -53,18 +53,20 @@
 
                                     <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}">
                                         <StackPanel>
-                                            <TextBlock
-                                                Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.PopoverTitle}"
+                                            <vw:TextBlock
+                                                LocalizableText="@Views.Popover.Config.PopoverTitle"
                                                 Style="{DynamicResource PopoverHeaderTitle}" />
-                                            <TextBlock
-                                                Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.PopoverSubtitle}"
+                                            <vw:TextBlock
+                                                LocalizableText="@Views.Popover.Config.PopoverSubtitle"
                                                 Style="{DynamicResource PopoverHeaderSubtitle}" />
                                         </StackPanel>
                                     </Border>
 
                                     <GroupBox Grid.Row="1"
-                                              Header="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.SectionGeneral}"
                                               Style="{DynamicResource PopoverSectionGroupBox}">
+                                        <GroupBox.Header>
+                                            <vw:TextBlock LocalizableText="@Views.Popover.Config.SectionGeneral"/>
+                                        </GroupBox.Header>
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto" />
@@ -75,8 +77,8 @@
                                                 <ColumnDefinition Width="*" />
                                             </Grid.ColumnDefinitions>
 
-                                            <TextBlock Grid.Row="0" Grid.Column="0"
-                                                       Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.LabelSpeed}"
+                                            <vw:TextBlock Grid.Row="0" Grid.Column="0"
+                                                       LocalizableText="@Views.Popover.Config.LabelSpeed"
                                                        Style="{DynamicResource PopoverMetaLabel}"
                                                        VerticalAlignment="Center" Margin="0,0,0,8" />
                                             <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal"
@@ -84,14 +86,14 @@
                                                 <vw:NumericVarIn VariableName="__DEMO.ConfigSpeed"
                                                                  Height="40" Width="120"
                                                                  RawLimitMin="0" RawLimitMax="100" />
-                                                <TextBlock
-                                                    Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.SpeedUnit}"
+                                                <vw:TextBlock
+                                                    LocalizableText="@Views.Popover.Config.SpeedUnit"
                                                     Style="{DynamicResource PopoverMetaValue}"
                                                     VerticalAlignment="Center" Margin="8,0,0,0" />
                                             </StackPanel>
 
-                                            <TextBlock Grid.Row="1" Grid.Column="0"
-                                                       Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.LabelEnabled}"
+                                            <vw:TextBlock Grid.Row="1" Grid.Column="0"
+                                                       LocalizableText="@Views.Popover.Config.LabelEnabled"
                                                        Style="{DynamicResource PopoverMetaLabel}"
                                                        VerticalAlignment="Center" />
                                             <vw:Switch Grid.Row="1" Grid.Column="1"
@@ -102,8 +104,10 @@
                                     </GroupBox>
 
                                     <GroupBox Grid.Row="2"
-                                              Header="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.SectionAdvanced}"
                                               Style="{DynamicResource PopoverSectionGroupBox}">
+                                        <GroupBox.Header>
+                                            <vw:TextBlock LocalizableText="@Views.Popover.Config.SectionAdvanced"/>
+                                        </GroupBox.Header>
                                         <Grid>
                                             <Grid.RowDefinitions>
                                                 <RowDefinition Height="Auto" />
@@ -114,8 +118,8 @@
                                                 <ColumnDefinition Width="*" />
                                             </Grid.ColumnDefinitions>
 
-                                            <TextBlock Grid.Row="0" Grid.Column="0"
-                                                       Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.LabelTemperature}"
+                                            <vw:TextBlock Grid.Row="0" Grid.Column="0"
+                                                       LocalizableText="@Views.Popover.Config.LabelTemperature"
                                                        Style="{DynamicResource PopoverMetaLabel}"
                                                        VerticalAlignment="Center" Margin="0,0,0,8" />
                                             <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal"
@@ -123,14 +127,14 @@
                                                 <vw:NumericVarIn VariableName="__DEMO.ConfigTemperature"
                                                                  Height="40" Width="120"
                                                                  RawLimitMin="-10" RawLimitMax="50" />
-                                                <TextBlock
-                                                    Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.TemperatureUnit}"
+                                                <vw:TextBlock
+                                                    LocalizableText="@Views.Popover.Config.TemperatureUnit"
                                                     Style="{DynamicResource PopoverMetaValue}"
                                                     VerticalAlignment="Center" Margin="8,0,0,0" />
                                             </StackPanel>
 
-                                            <TextBlock Grid.Row="1" Grid.Column="0"
-                                                       Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.LabelAutoMode}"
+                                            <vw:TextBlock Grid.Row="1" Grid.Column="0"
+                                                       LocalizableText="@Views.Popover.Config.LabelAutoMode"
                                                        Style="{DynamicResource PopoverMetaLabel}"
                                                        VerticalAlignment="Center" />
                                             <vw:CheckBox Grid.Row="1" Grid.Column="1"
@@ -139,8 +143,8 @@
                                         </Grid>
                                     </GroupBox>
 
-                                    <TextBlock Grid.Row="3"
-                                               Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.HelpText}"
+                                    <vw:TextBlock Grid.Row="3"
+                                               LocalizableText="@Views.Popover.Config.HelpText"
                                                Style="{DynamicResource PopoverBodyText}"
                                                Margin="8,0,8,12" />
 
@@ -188,7 +192,7 @@
 
             <StackPanel HorizontalAlignment="Center">
                 <vw:SymbolPresenter SymbolResourceKey="FeedbackIcon"/>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Config.TapHint}"
+                <vw:TextBlock LocalizableText="@Views.Popover.Config.TapHint"
                            Style="{DynamicResource PopoverMetaLabel}"
                            HorizontalAlignment="Center" Margin="0,12,0,0" />
             </StackPanel>

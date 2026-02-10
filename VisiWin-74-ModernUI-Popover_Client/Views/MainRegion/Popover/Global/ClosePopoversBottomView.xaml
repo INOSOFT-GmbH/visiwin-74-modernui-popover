@@ -20,8 +20,8 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel>
-                    <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.ClosePopovers.Title}" Style="{DynamicResource PopoverHeaderTitle}" />
-                    <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.ClosePopovers.Subtitle}"
+                    <vw:TextBlock LocalizableText="@Views.Popover.ClosePopovers.Title" Style="{DynamicResource PopoverHeaderTitle}" />
+                    <vw:TextBlock LocalizableText="@Views.Popover.ClosePopovers.Subtitle"
                                Style="{DynamicResource PopoverHeaderSubtitle}" />
                 </StackPanel>
 

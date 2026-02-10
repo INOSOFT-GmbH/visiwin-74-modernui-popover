@@ -1,15 +1,15 @@
 <vw:View x:Class="HMI.Views.MainRegion.Popover.BarPopoverView"
-    x:Name="RootView"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:vw="http://inosoft.com/visiwin7"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:adapters="clr-namespace:HMI.Components"
-    mc:Ignorable="d"
-    d:DataContext="{d:DesignInstance Type=adapters:BarRelationModel, IsDesignTimeCreatable=True}"
-    Width="405" Height="400"
-    Background="{DynamicResource ApplicationBackgroundBrush}">
+         x:Name="RootView"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:vw="http://inosoft.com/visiwin7"
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:adapters="clr-namespace:HMI.Components"
+         mc:Ignorable="d"
+         d:DataContext="{d:DesignInstance Type=adapters:BarRelationModel, IsDesignTimeCreatable=True}"
+         Width="405" Height="400"
+         Background="{DynamicResource ApplicationBackgroundBrush}">
 
     <vw:View.Resources>
         <adapters:BindingProxy x:Key="proxy" Data="{Binding}" />
@@ -18,23 +18,28 @@
     <Grid Style="{DynamicResource PopoverRootGrid}">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" Style="{DynamicResource PopoverHeaderBand}">
             <StackPanel>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.PopoverTitle}" Style="{DynamicResource PopoverHeaderTitle}"/>
-                <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.PopoverSubtitle}"
-                           Style="{DynamicResource PopoverHeaderSubtitle}"/>
+                <vw:TextBlock LocalizableText="@Views.Popover.Bar.PopoverTitle"
+                              Style="{DynamicResource PopoverHeaderTitle}" />
+                <vw:TextBlock LocalizableText="@Views.Popover.Bar.PopoverSubtitle"
+                              Style="{DynamicResource PopoverHeaderSubtitle}" />
             </StackPanel>
         </Border>
 
-            <GroupBox Grid.Row="1" Header="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.RelationsHeader}" Style="{DynamicResource PopoverSectionGroupBox}">
+        <GroupBox Grid.Row="1"
+                  Style="{DynamicResource PopoverSectionGroupBox}">
+            <GroupBox.Header>
+                <vw:TextBlock LocalizableText="@Views.Popover.Bar.RelationsHeader"/>
+            </GroupBox.Header>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
                 <vw:PieChart Grid.Column="0"
@@ -44,45 +49,50 @@
                              VerticalAlignment="Center"
                              InnerCircleSize="60">
 
-            <vw:PieSegment VariableName="{Binding Data.Var1, Source={StaticResource proxy}}" 
-                           Fill="{DynamicResource PrimaryBrush}" UseVariableText="True"
-                           Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Segment1}"/>
+                    <vw:PieSegment VariableName="{Binding Data.Var1, Source={StaticResource proxy}}"
+                                   Fill="{DynamicResource PrimaryBrush}" UseVariableText="True"
+                                   LocalizableText="@Views.Popover.Bar.Segment1" />
 
-            <vw:PieSegment VariableName="{Binding Data.Var2, Source={StaticResource proxy}}" 
-                           Fill="{DynamicResource PrimaryLightBrush}" UseVariableText="True"
-                           Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Segment2}"/>
+                    <vw:PieSegment VariableName="{Binding Data.Var2, Source={StaticResource proxy}}"
+                                   Fill="{DynamicResource PrimaryLightBrush}" UseVariableText="True"
+                                   LocalizableText="@Views.Popover.Bar.Segment2" />
 
-            <vw:PieSegment VariableName="{Binding Data.Var3, Source={StaticResource proxy}}" 
-                           Fill="{DynamicResource PrimaryDarkBrush}" UseVariableText="True"
-                           Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Segment3}"/>
+                    <vw:PieSegment VariableName="{Binding Data.Var3, Source={StaticResource proxy}}"
+                                   Fill="{DynamicResource PrimaryDarkBrush}" UseVariableText="True"
+                                   LocalizableText="@Views.Popover.Bar.Segment3" />
 
-            <vw:PieSegment VariableName="{Binding Data.Var4, Source={StaticResource proxy}}" 
-                           Fill="{DynamicResource PrimaryExtraLightBrush}" UseVariableText="True"
-                           Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Segment4}"/>
+                    <vw:PieSegment VariableName="{Binding Data.Var4, Source={StaticResource proxy}}"
+                                   Fill="{DynamicResource PrimaryExtraLightBrush}" UseVariableText="True"
+                                   LocalizableText="@Views.Popover.Bar.Segment4" />
 
                 </vw:PieChart>
 
                 <StackPanel Grid.Column="1" Margin="16,0,0,0" VerticalAlignment="Center">
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                        <Rectangle Width="10" Height="10" Fill="{DynamicResource PrimaryBrush}" Margin="0,0,8,0"/>
-                        <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Segment1}" Style="{DynamicResource PopoverMetaLabel}"/>
+                        <Rectangle Width="10" Height="10" Fill="{DynamicResource PrimaryBrush}" Margin="0,0,8,0" />
+                        <vw:TextBlock LocalizableText="@Views.Popover.Bar.Segment1"
+                                      Style="{DynamicResource PopoverMetaLabel}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                        <Rectangle Width="10" Height="10" Fill="{DynamicResource PrimaryLightBrush}" Margin="0,0,8,0"/>
-                        <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Segment2}" Style="{DynamicResource PopoverMetaLabel}"/>
+                        <Rectangle Width="10" Height="10" Fill="{DynamicResource PrimaryLightBrush}" Margin="0,0,8,0" />
+                        <vw:TextBlock LocalizableText="@Views.Popover.Bar.Segment2"
+                                      Style="{DynamicResource PopoverMetaLabel}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
-                        <Rectangle Width="10" Height="10" Fill="{DynamicResource PrimaryDarkBrush}" Margin="0,0,8,0"/>
-                        <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Segment3}" Style="{DynamicResource PopoverMetaLabel}"/>
+                        <Rectangle Width="10" Height="10" Fill="{DynamicResource PrimaryDarkBrush}" Margin="0,0,8,0" />
+                        <vw:TextBlock LocalizableText="@Views.Popover.Bar.Segment3"
+                                      Style="{DynamicResource PopoverMetaLabel}" />
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <Rectangle Width="10" Height="10" Fill="{DynamicResource PrimaryExtraLightBrush}" Margin="0,0,8,0"/>
-                        <TextBlock Text="{vw:LocalizedTextBinding LocalizableText=@Views.Popover.Bar.Segment4}" Style="{DynamicResource PopoverMetaLabel}"/>
+                        <Rectangle Width="10" Height="10" Fill="{DynamicResource PrimaryExtraLightBrush}"
+                                   Margin="0,0,8,0" />
+                        <vw:TextBlock LocalizableText="@Views.Popover.Bar.Segment4"
+                                      Style="{DynamicResource PopoverMetaLabel}" />
                     </StackPanel>
                 </StackPanel>
             </Grid>
         </GroupBox>
 
     </Grid>
-    
+
 </vw:View>
