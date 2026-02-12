@@ -681,6 +681,7 @@
 									<LocalizedText Name="NavBar" Text="Bar" />
 									<LocalizedText Name="NavPieChart" Text="PieChart" />
 									<LocalizedText Name="NavAdditionalHelp" Text="AdditionalHelp" />
+									<LocalizedText Name="NavAuthorization" Text="Authorization" />
 								</Node>
 								<Node Name="Popover">
 									<Node Name="Common">
@@ -776,6 +777,14 @@
 										<LocalizedText Name="SpeedUnit" Text="rpm" />
 										<LocalizedText Name="TemperatureUnit" Text="°C" />
 										<LocalizedText Name="TapHint" Text="Tap to configure" />
+									</Node>
+									<Node Name="Authorization">
+										<LocalizedText Name="SampleTitle" Text="Authorization Sample" />
+										<LocalizedText Name="SampleSubtitle" Text="Popover protection via User Right" />
+										<LocalizedText Name="Instruction" Text="Clicking the button opens a protected Popover." />
+										<LocalizedText Name="LoginHint" Text="This action requires 'TestRight'. Please login as 'guest' (Password: guest)." />
+										<LocalizedText Name="PopoverTitle" Text="Restricted Content" />
+										<LocalizedText Name="PopoverContent" Text="You have clearly demonstrated that you possess the necessary permissions." />
 									</Node>
 								</Node>
 							</Node>
@@ -1478,6 +1487,7 @@
 									<LocalizedText Name="NavBar" Text="Bar" />
 									<LocalizedText Name="NavPieChart" Text="PieChart" />
 									<LocalizedText Name="NavAdditionalHelp" Text="AdditionalHelp" />
+									<LocalizedText Name="NavAuthorization" Text="Autorisierung" />
 								</Node>
 								<Node Name="Popover">
 									<Node Name="Common">
@@ -1573,6 +1583,14 @@
 										<LocalizedText Name="SpeedUnit" Text="U/min" />
 										<LocalizedText Name="TemperatureUnit" Text="°C" />
 										<LocalizedText Name="TapHint" Text="Tippe zum Konfigurieren" />
+									</Node>
+									<Node Name="Authorization">
+										<LocalizedText Name="SampleTitle" Text="Autorisierung-Beispiel" />
+										<LocalizedText Name="SampleSubtitle" Text="Popover-Schutz über Benutzerrecht" />
+										<LocalizedText Name="Instruction" Text="Ein Klick auf die Schaltfläche öffnet ein geschütztes Popover." />
+										<LocalizedText Name="LoginHint" Text="Diese Aktion erfordert 'TestRight'. Bitte als 'guest' anmelden (Passwort: guest)." />
+										<LocalizedText Name="PopoverTitle" Text="Eingeschränkter Inhalt" />
+										<LocalizedText Name="PopoverContent" Text="Sie haben eindeutig nachgewiesen, dass Sie über die erforderlichen Berechtigungen verfügen." />
 									</Node>
 								</Node>
 							</Node>
@@ -1900,6 +1918,7 @@
 										<TextDefinition Name="NavBar" />
 										<TextDefinition Name="NavPieChart" />
 										<TextDefinition Name="NavAdditionalHelp" />
+										<TextDefinition Name="NavAuthorization" />
 									</TextGroup.Texts>
 								</TextGroup>
 								<TextGroup Name="Popover">
@@ -2010,6 +2029,16 @@
 												<TextDefinition Name="SpeedUnit" />
 												<TextDefinition Name="TemperatureUnit" />
 												<TextDefinition Name="TapHint" />
+											</TextGroup.Texts>
+										</TextGroup>
+										<TextGroup Name="Authorization">
+											<TextGroup.Texts>
+												<TextDefinition Name="SampleTitle" />
+												<TextDefinition Name="SampleSubtitle" />
+												<TextDefinition Name="Instruction" />
+												<TextDefinition Name="LoginHint" />
+												<TextDefinition Name="PopoverTitle" />
+												<TextDefinition Name="PopoverContent" />
 											</TextGroup.Texts>
 										</TextGroup>
 									</TextGroup.TextGroups>

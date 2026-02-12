@@ -625,6 +625,9 @@
 							<Node Name="Groups">
 								<LocalizedText Name="Guests" Text="" />
 							</Node>
+							<Node Name="Rights">
+								<LocalizedText Name="TestRight" Text="TestRight" />
+							</Node>
 						</Node>
 					</Language.LocalizedTexts>
 				</Language>
@@ -1232,6 +1235,9 @@
 						<Node Name="UserSystem">
 							<Node Name="Groups">
 								<LocalizedText Name="Guests" Text="" />
+							</Node>
+							<Node Name="Rights">
+								<LocalizedText Name="TestRight" Text="Test-Recht" />
 							</Node>
 						</Node>
 					</Language.LocalizedTexts>
@@ -2645,8 +2651,15 @@
 			</TrendSystem.ParameterTemplates>
 		</TrendSystem>
 		<UserManagerSystem>
+			<UserManagerSystem.Rights>
+				<Right Name="TestRight" />
+			</UserManagerSystem.Rights>
 			<UserManagerSystem.UserGroups>
-				<UserGroup Name="Guests" Checksum="1642696220" Comment="Guests" />
+				<UserGroup Name="Guests" Checksum="-1781236790" Comment="Guests">
+					<UserGroup.RightNames>
+						<StringItem Value="TestRight" />
+					</UserGroup.RightNames>
+				</UserGroup>
 			</UserManagerSystem.UserGroups>
 			<UserManagerSystem.Users>
 				<User Name="guest" Checksum="-703043481" Code="" Comment="Default  guest user.Used by VisiWin 7 Web UI for the auto login function." CryptedPassword="1533158966" FullName="Guest User" GroupName="Guests" State="Activated" />

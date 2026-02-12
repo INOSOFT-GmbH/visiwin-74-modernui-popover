@@ -217,6 +217,31 @@ The sample project demonstrates three distinct scenarios for using Popovers, hig
 </vw:PopoverAction>
 ```
 
+### 4. Authorization-Protected Popover (Action + AuthorizationRight)
+*   **Use Case:** A popover that only opens when the current user has a specific authorization right. Ideal for protecting sensitive configuration or diagnostic views behind a login.
+*   **Key Components:** `vw:PopoverAction` with `AuthorizationRight` property.
+*   **Configuration:**
+    *   Set `AuthorizationRight` on the `PopoverAction` to the name of the required user right (e.g., `"TestRight"`).
+    *   If the user does not have the right, the popover will **not** open.
+    *   Combine with the VisiWin User Management to define rights per user/group.
+
+**Example (`AuthorizationSampleView.xaml`):**
+```xml
+<Button Content="Open Protected Popover">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="PreviewMouseDown">
+            <vw:PopoverAction PopoverViewName="AuthorizationPopoverView"
+                              LocalizableTitle="@Views.Popover.Authorization.PopoverTitle"
+                              Placement="Bottom"
+                              Alignment="OnElement"
+                              AuthorizationRight="TestRight"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+</Button>
+```
+
+**Testing:** Navigate to the "Authorization" tab. Click the button while logged out — the popover will not open. Log in as `guest` (password: `guest`) and click again — the popover opens with a success message.
+
 ## License
 
 This project is provided as a sample implementation for VisiWin7 development.

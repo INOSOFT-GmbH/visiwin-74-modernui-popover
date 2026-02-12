@@ -138,6 +138,12 @@
     <Compile Include="Views\MainRegion\Popover\Global\VarOutPopoverView.xaml.cs">
       <DependentUpon>VarOutPopoverView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainRegion\Popover\Global\AuthorizationSampleView.xaml.cs">
+      <DependentUpon>AuthorizationSampleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Popover\Global\AuthorizationPopoverView.xaml.cs">
+      <DependentUpon>AuthorizationPopoverView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainRegion\SystemViews\HelpView.xaml.cs">
       <DependentUpon>HelpView.xaml</DependentUpon>
     </Compile>
@@ -306,6 +312,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainRegion\Popover\Global\VarOutPopoverView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Popover\Global\AuthorizationSampleView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Popover\Global\AuthorizationPopoverView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

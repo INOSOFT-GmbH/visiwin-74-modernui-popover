@@ -57,6 +57,10 @@
                                             ViewName="PieChartSampleView"
                                             RegionName="PopoverDemoRegion"/>
 
+                <vw:NavigationContainerItem LocalizableText="@Views.PopoverNavigation.NavAuthorization" Height="80" Width="250" Margin="5,5,5,0"
+                                            ViewName="AuthorizationSampleView"
+                                            RegionName="PopoverDemoRegion"/>
+
             </vw:NavigationContainer.Items>
 
         </vw:NavigationContainer>
