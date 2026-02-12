@@ -5,6 +5,13 @@ This is the **example/development project** demonstrating how to implement a "Po
 
 The project serves as a reference for structuring complex UI layouts where content needs to be presented in a decoupled, overlay-like, or distinct "popover" manner relative to the main navigation interactions.
 
+[![VisiWin](https://img.shields.io/badge/VisiWin-7.4-green.svg)](https://www.inosoft.com/)
+![.NET Framework](https://img.shields.io/badge/.NET%20Framework-%23512BD4.svg?style=flat&logo=dotnet&logoColor=white)
+![WPF](https://img.shields.io/badge/WPF-%23512BD4.svg?style=flat&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-%235C2D91.svg?style=flat&logo=visualstudio&logoColor=white)
+
 ![Popover Preview](Popover.png)
 
 ## Related packages
