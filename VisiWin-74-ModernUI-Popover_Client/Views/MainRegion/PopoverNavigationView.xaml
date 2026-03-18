@@ -80,6 +80,10 @@
                                             ViewName="CustomSampleView"
                                             RegionName="PopoverDemoRegion"/>
 
+                <vw:NavigationContainerItem LocalizableText="@Views.PopoverNavigation.NavCloseOnBackground" Height="80" Width="250" Margin="5,5,5,0"
+                                            ViewName="CloseOnBackgroundView"
+                                            RegionName="PopoverDemoRegion"/>
+
             </vw:NavigationContainer.Items>
 
         </vw:NavigationContainer>

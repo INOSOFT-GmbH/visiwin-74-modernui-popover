@@ -111,6 +111,9 @@
     <Compile Include="Views\MainRegion\Popover\Inline\AdditionalHelpPopoverView.xaml.cs">
       <DependentUpon>AdditionalHelpPopoverView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MainRegion\Popover\Inline\CloseOnBackgroundView.xaml.cs">
+      <DependentUpon>CloseOnBackgroundView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainRegion\Popover\Inline\CustomSampleView.xaml.cs">
       <DependentUpon>CustomSampleView.xaml</DependentUpon>
     </Compile>
@@ -143,6 +146,9 @@
     </Compile>
     <Compile Include="Views\MainRegion\Popover\Global\AuthorizationPopoverView.xaml.cs">
       <DependentUpon>AuthorizationPopoverView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainRegion\Popover\Inline\CloseOnBackgroundPopoverView.xaml.cs">
+      <DependentUpon>CloseOnBackgroundPopoverView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainRegion\SystemViews\HelpView.xaml.cs">
       <DependentUpon>HelpView.xaml</DependentUpon>
@@ -279,6 +285,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\MainRegion\Popover\Inline\CloseOnBackgroundView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\MainRegion\Popover\Inline\CustomSampleView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -320,6 +330,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MainRegion\Popover\Global\AuthorizationPopoverView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MainRegion\Popover\Inline\CloseOnBackgroundPopoverView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

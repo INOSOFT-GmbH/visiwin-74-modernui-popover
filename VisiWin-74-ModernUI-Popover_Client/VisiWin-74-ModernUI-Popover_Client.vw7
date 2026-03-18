@@ -682,6 +682,7 @@
 									<LocalizedText Name="NavPieChart" Text="PieChart" />
 									<LocalizedText Name="NavAdditionalHelp" Text="AdditionalHelp" />
 									<LocalizedText Name="NavAuthorization" Text="Authorization" />
+									<LocalizedText Name="NavCloseOnBackground" Text="Clicking outside closes" />
 								</Node>
 								<Node Name="Popover">
 									<Node Name="Common">
@@ -785,6 +786,13 @@
 										<LocalizedText Name="LoginHint" Text="This action requires 'TestRight'. Please login as 'guest' (Password: guest)." />
 										<LocalizedText Name="PopoverTitle" Text="Restricted Content" />
 										<LocalizedText Name="PopoverContent" Text="You have clearly demonstrated that you possess the necessary permissions." />
+									</Node>
+									<Node Name="CloseOnBackground">
+										<LocalizedText Name="SampleTitle" Text="Clicking outside closes" />
+										<LocalizedText Name="SampleSubtitle" Text="Once the popover is open, you can close it by clicking outside the popover." />
+										<LocalizedText Name="PopoverTitle" Text="Close outside sample" />
+										<LocalizedText Name="Button" Text="Tap to open" />
+										<LocalizedText Name="PopoverText" Text="Tap outside to close." />
 									</Node>
 								</Node>
 							</Node>
@@ -1486,8 +1494,9 @@
 									<LocalizedText Name="NavVarOut" Text="VarOut" />
 									<LocalizedText Name="NavBar" Text="Bar" />
 									<LocalizedText Name="NavPieChart" Text="PieChart" />
-									<LocalizedText Name="NavAdditionalHelp" Text="AdditionalHelp" />
+									<LocalizedText Name="NavAdditionalHelp" Text="Zusätzliche Hilfe" />
 									<LocalizedText Name="NavAuthorization" Text="Autorisierung" />
+									<LocalizedText Name="NavCloseOnBackground" Text="Außenklick schließt" />
 								</Node>
 								<Node Name="Popover">
 									<Node Name="Common">
@@ -1591,6 +1600,13 @@
 										<LocalizedText Name="LoginHint" Text="Diese Aktion erfordert 'TestRight'. Bitte als 'guest' anmelden (Passwort: guest)." />
 										<LocalizedText Name="PopoverTitle" Text="Eingeschränkter Inhalt" />
 										<LocalizedText Name="PopoverContent" Text="Sie haben eindeutig nachgewiesen, dass Sie über die erforderlichen Berechtigungen verfügen." />
+									</Node>
+									<Node Name="CloseOnBackground">
+										<LocalizedText Name="SampleTitle" Text="Außenklick schließt" />
+										<LocalizedText Name="SampleSubtitle" Text="Sobald das Popover geöffnet ist, wird es durch einen Klick außerhalb des Popovers geschlossen." />
+										<LocalizedText Name="PopoverTitle" Text="Beispiel zum Schließen von Außerhalb" />
+										<LocalizedText Name="Button" Text="Tippe zum Öffnen" />
+										<LocalizedText Name="PopoverText" Text="Zum Schließen außerhalb tippen." />
 									</Node>
 								</Node>
 							</Node>
@@ -1919,6 +1935,7 @@
 										<TextDefinition Name="NavPieChart" />
 										<TextDefinition Name="NavAdditionalHelp" />
 										<TextDefinition Name="NavAuthorization" />
+										<TextDefinition Name="NavCloseOnBackground" />
 									</TextGroup.Texts>
 								</TextGroup>
 								<TextGroup Name="Popover">
@@ -2039,6 +2056,15 @@
 												<TextDefinition Name="LoginHint" />
 												<TextDefinition Name="PopoverTitle" />
 												<TextDefinition Name="PopoverContent" />
+											</TextGroup.Texts>
+										</TextGroup>
+										<TextGroup Name="CloseOnBackground">
+											<TextGroup.Texts>
+												<TextDefinition Name="SampleTitle" />
+												<TextDefinition Name="SampleSubtitle" />
+												<TextDefinition Name="PopoverTitle" />
+												<TextDefinition Name="Button" />
+												<TextDefinition Name="PopoverText" />
 											</TextGroup.Texts>
 										</TextGroup>
 									</TextGroup.TextGroups>
