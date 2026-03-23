@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="VisiWin7.WPF.Styles.Plain">
-      <Version>99.0.0-debug</Version>
+      <Version>74.1.162-prev</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
