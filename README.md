@@ -23,7 +23,7 @@ The project serves as a reference for structuring complex UI layouts where conte
 
 ## Prerequisites
 
-- **VisiWin 7 IDE** - Install VisiWin 7 IDE (version 2025-1 or later recommended)
+- **VisiWin 7 IDE** - Install VisiWin 7 IDE (version 2026-1 or later recommended)
 - **Visual Studio 2019/2022** - For development and compilation
 - **.NET Framework 4.8** - Target framework for all projects
 - **VisiWin 7 Runtime 7.4** - Required for testing and deployment
